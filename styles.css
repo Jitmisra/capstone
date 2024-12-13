@@ -1,0 +1,246 @@
+
+
+
+body {
+  background: #FFFFFF;
+  color: #000000;
+  margin: 0;
+  overflow-x: hidden;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #33333314;
+  width: 80%;
+  height: 5vmax;
+  margin: auto;
+  border-radius:10px ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.links{
+  padding: 1vmax;
+}
+.head .links a{
+  font-size: 1.3vmax;
+  text-decoration: none;
+  padding: 0.8vmax;
+  color: black;
+}
+.head h1{
+  font-size: 2.8vmax;
+  margin-left: -10vmax;
+}
+
+
+section {
+  padding: 48px 48px;
+}
+
+#projects {
+  width: auto;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+#projects div {
+  grid-column: span 1 / span 1;
+  grid-row: span 1 / span 1;
+  margin-bottom: 48px;
+  transition: 0.4s ease;
+}
+
+#projects div:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
+
+#projects div img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#projects div h4 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+}
+
+#projects div p {
+  font-size: 17px;
+  margin: 0;
+}
+#about-me h1 {
+  font-size: 48px;
+}
+
+#about-me {
+  display: flex;
+  text-align: center;
+  justify-content: center; 
+  width: 70vw;
+  margin-left: 13vw;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 48px;
+  text-align: center;
+}
+
+#contact h4 {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: serif;
+  margin: 0px;
+}
+
+
+#contact form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact form input {
+  display: inline-block;
+}
+
+#contact button {
+  color: #fff;
+  background-color: #000000;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 8px;
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+#contact input {
+  font-size: 20px;
+  padding: 8px 16px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  color: #000000;
+  width: 56px;
+  height: 64px;
+  text-align: center;
+}
+
+#contact a {
+  margin-top: 32px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  padding: 48px;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+
+footer p {
+  font-size: 28px;
+  font-family: "Syne", sans-serif;
+}
+
+footer button {
+  font-size: 20px;
+  padding: 12px 24px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background: none;
+
+  color: #000000;
+}
+
+footer button:hover {
+  background: #000000;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.slideUp {
+  animation: 1.5s slideUp ease;
+}
+
+.slideDown {
+  animation: 1.5s slideDown ease;
+}
+
+.slideRight {
+  animation: 1.5s slideRight ease;
+}
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 500px) {
+  #projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #about-me h1 {
+    display: block;
+    color: black;
+  }
+
+  #contact {
+    padding: 100px 20px;
+  }
+  #contact input {
+    width: 20px;
+  }
+}
